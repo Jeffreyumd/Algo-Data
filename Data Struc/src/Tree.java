@@ -1,4 +1,5 @@
 
+// Representation of a binary Tree
 public class Tree {
 
   public static void main(String arg[]) {
@@ -10,6 +11,7 @@ public class Tree {
       node.add(i);
     }
     node.add(4);
+    node.add(-1);
     node.printOrder();
   }
 
@@ -83,6 +85,8 @@ class Node {
     if (this.right != null) {
       this.right.printOrder();
     }
+    
+    
   }
 
 }

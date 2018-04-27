@@ -5,15 +5,13 @@ public class Tree {
 
 
     Node node = new Node(5);
-    
+
     for(int i=0; i < 10; i++) {
       node.add(i);
     }
-    
+    node.add(4);
     node.printOrder();
   }
-
-
 
 }
 
@@ -48,6 +46,7 @@ class Node {
       } 
     }
   }
+  
 
   // check if node contains item
   public boolean find(int value) {
@@ -62,7 +61,7 @@ class Node {
         return this.left.find(value);
       }
     } else {
-   // check if right node exits 
+      // check if right node exits 
       if (this.right == null) {
         return false;
       } else {
@@ -70,17 +69,17 @@ class Node {
       }
     }
   }
-  
+
   // print data in Node
   // EFFECT print data from smallest to largest
   void printOrder() {
-    
+
     if (this.left != null) {
       this.left.printOrder();
     }
-    
+
     System.out.println(this.data);
-    
+
     if (this.right != null) {
       this.right.printOrder();
     }
