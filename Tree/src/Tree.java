@@ -84,9 +84,6 @@ class Node {
     if (this.right != null) {
       this.right.printOrder();
     }
-    
-    //System.out.println(this.data);
-    
   }
 
 }
